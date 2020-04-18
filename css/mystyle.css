@@ -1,0 +1,31 @@
+body {
+  background-color: #262626;
+  margin: 0px;
+}
+nav {
+  padding: 10px;
+  display: flex;
+}
+.nav-option {
+  padding: 5px;
+}
+.actual {
+  background-color: DarkOrange;
+  color: Beige;
+}
+.otros {
+  color: SkyBlue;
+}
+footer {
+  padding: 5px;
+  font-size: 75%;
+  color: Azure;
+}
+div.contenido {
+  background-color:WhiteSmoke;
+  padding: 10px;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
