@@ -28,3 +28,7 @@ div.contenido {
 a {
   text-decoration: none;
 }
+.right-absolute {
+  position: absolute;
+  right: 10px;
+}
