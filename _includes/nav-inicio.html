@@ -1,0 +1,45 @@
+{% if page.lang == "es" %}
+{% assign strings = "index.html,Inicio,Contenidos,English" | split: "," %}
+{% assign intpath = page.url | replace_first: "es", "en" %}
+{% elsif page.lang == "en" %}
+{% assign strings = "index-en.html,Home,Contents,Español" | split: "," %}
+{% assign intpath = page.url | replace_first: "en", "es" %}
+{% endif %}
+
+<nav>
+
+  {% if page.name == "index.md" or page.name == "index-en.md"%}
+  <div class="nav-option actual">
+    <a href="{{ strings[0] }}">
+  {% else %}
+  <div class="nav-option">
+    <a href="/{{ strings[0] }}" class="otros">
+  {% endif %}
+      {{ strings[1] }}
+    </a>
+  </div>
+
+  {% if page.name == "contenidos.md" %}
+  <div class="nav-option actual">
+    <a href="/{{ page.lang }}/contenidos.html">
+  {% else %}
+  <div class="nav-option">
+    <a href="/{{ page.lang }}/contenidos.html" class="otros">
+  {% endif %}
+      {{ strings[2] }}
+    </a>
+  </div>
+
+  <div class="nav-option right-absolute">
+  {% if page.url == "/index.html" %}
+    <a class="otros" href="/index-en.html">
+  {% elsif page.url == "/index-en.html" %}
+    <a class="otros" href="/index.html">
+  {% else %}
+    <a class="otros" href="{{ intpath }}">
+  {% endif %}
+      {{ strings[3] }}
+    </a>
+  </div>
+
+</nav>

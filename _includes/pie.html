@@ -1,0 +1,16 @@
+{% if page.lang == "es" %}
+  {% assign strings = "Licencia MIT,Código Fuente" | split: "," %}
+{% elsif page.lang == "en" %}
+  {% assign strings = "MIT License,Source Code" | split: "," %}
+{% endif %}
+<footer>
+    © 2019-2020 Gabriel De Luca -
+    <a href="LICENSE.txt" class="otros">
+      {{ strings[0] }}
+    </a>
+    -
+    <a href="https://github.com/gabriel-de-luca/gabriel-de-luca.github.io"
+    class="otros">
+      {{ strings[1] }}
+    </a>
+</footer>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="{{ page.lang }}"
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
   <title>{{ page.title }}</title>
 </head>
 <body>
-  {% include navigation.html %}
+  {% include nav-inicio.html %}
   <div class="contenido">
   {{ content }}
   </div>
-  {% include footer.html %}
+  {% include pie.html %}
 </body>
 </html>

@@ -1,0 +1,16 @@
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "inicio"
+  -
+    scope:
+      path: "es"
+    values:
+      lang: "es"
+  -
+    scope:
+      path: "en"
+    values:
+      lang: "en"
